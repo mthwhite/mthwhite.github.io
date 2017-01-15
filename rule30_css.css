@@ -1,0 +1,33 @@
+body {
+    font-size: 100%;
+	
+}
+
+
+.simulation{
+  display: inline-block;
+  border: 2px solid black;
+  width: 100%;
+  vertical-align: top;
+  text-align : center;
+}
+
+
+.new-row {
+  width: 1000%;
+  height: 10px;
+}
+
+.tile {
+  width: 10px;
+  height: 10px;
+  float: left;
+}
+
+.tile.on {
+	background: #000000;
+}
+
+.tile.off {
+	background: #ffffff;
+}
