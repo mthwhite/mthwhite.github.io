@@ -3,18 +3,67 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<link rel="stylesheet" href="rule30_css.css">
+		<link rel="stylesheet" href="game_css.css">
 		<title>
-			Rule 30 Automation
+			Pandemic Pokemon
 		</title>
 	</head>
 	<body>
-<button onclick = "start_simulation()"> Start </button>
-<button onclick = "stop_simulation()"> Stop </button>
-<button onclick = "refresh_simulation()"> Refresh </button>
-			<div id="show_result" class = "simulation">
-			</div>
+		<div class = 'game-border'>
+		<div class="container">
+		<button type="button" onclick = "toggle_rules()">Rules</button>
+		<div id="here_be_rules"></div>
+		</div>
+			<p id="create_tiles"></p>
+			<table><tr>
+			<td><p id="current-player"></p></td>
+			<td style="padding-left:10em">
+<div id = "new-stats-table">
+<div id ="new-goal-stats" class="stats goal"> </div>
+</div>
+</tr></table>
+<table><tr>
+<td>
+		<div id = "player-boards"></div>
+</td>
+<td>		
+	<div id = "market" class = "market">
+	<div id = "current_player_coins"> </div><br />
+			<div class="levelup_button" id = "levelup_button">3 coins: level up</button></div><br/ >
+			<button type="button" onclick = "add_action_button()">4 coins: +1 action</button><br />
+			<button type="button" onclick = "recruit_alien_button()">10 coins: recruit alien</button>
+		</div>	
+</td>
+</tr></table>
+
+		<div id = "time_cards"> </div>
+		</div>
+		<div id = "game-stats"></div>
+	
 	</body>	
 		
-		<script src="sim_objects.js"></script>
+		<script src="objects.js"></script>
+		<script src="generate_tiles.js"></script>
+		<script src="actions.js"></script>
+		<script src="alien_abilities.js"></script>
+		<script src="card_actions.js"></script>
+		<script>
+		
+
+		//Things to do:
+	
+function toggle_rules() {
+	var rules = " Rules so far: <br />		Movement: <br />		1) You can click and drag an alien onto a terrain tile of the correct color adjacent to the player token. (Gold tiles can be any color alien.) <br />		2) If you have two actions you can move the player tile by itself to an adjacent space. <br />		3) If there is still an alien on the board from the previous move, you can move back on to it.<br /><br />		Crisis cards:<br />		1) You can clear crisis cards by dragging an alien of the correct color onto the crisis card (if you are currently on that color) <br />		2) You can mark your current tile. Marks can be dragged at any time in the future to clear a crisis tile of that color. <br />		3) You can also use an alien if it has the correct classification as a tile of any color<br /><br />		Goal:<br />		1) If you clear a gold crisis, you gain a goal point. <br />		2) You can use goal points to mark gold tiles. Mark 6 goal tiles to win (and get back?)<br />		3) You lose if you hit the times_up crisis or ??? (some other condition)";		
+		var the_rules = document.getElementById("here_be_rules");
+		if(the_rules.innerHTML === "") {
+			the_rules.innerHTML = rules;
+		}
+		else {
+			the_rules.innerHTML = "";
+		}
+		
+}
+		</script>
+		
+		
 		
