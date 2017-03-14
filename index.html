@@ -26,20 +26,15 @@
 	</div>
 -->
 	<span id = 'game-rules' ng-show="1">{{$ctrl.rules}}</span>
-	<span id = 'game-rules' ng-show="1">{{rules}}</span>
-	<span id = 'game-rules' ng-show="1">{{bgCtrl.rules}}</span>
-	<span id = 'game-rules' ng-show="1">{{bgFullController.rules}}</span>
-	<span id = 'game-rules' ng-show="1">{{bgFullController().rules}}</span>
-	<span id = 'game-rules' ng-show="1">{{$ctrl.rules + 1  + 1}}</span>
 
-	<div class = 'game-object'>
-		<game-board></game-board>
-	</div>
-	<!--<div class = 'game-border'>
+	<div class = 'game-border'>
+		<div class = 'game-object'>
+			<game-board></game-board>
+		</div>
 		<div class = 'game-object'>
 			<bg-current-player-board></bg-current-player-board>
 		</div>
-		<div class = 'game-object'>
+		<!--<div class = 'game-object'>
 			<bg-stats-table></bg-stats-table>
 		</div>
 		<div class = 'game-object'>
@@ -47,8 +42,8 @@
 		</div>
 		<div class = 'game-object'>
 			<bg-time-cards></bg-time-cards>
-		</div>
-	</div>-->
+		</div>-->
+	</div>
 	<!--<div class = 'game-extra'>
 		<bg-stats-testing></bg-stats-testing>
 	</div>-->
@@ -75,7 +70,14 @@
 	 angular.module('bgFull.statsTesting', []);
 	 angular.module('bgFull.timeCards', []);
 
-	 angular.module('bgFull').component('gameBoard', {
+	 angular.module('bgFull')
+	 .component('bgFull.currentPlayerBoard', {
+		 controller: 'currentPlayerBoardCtrl as $ctrl',
+		 parent: 'bgFull',
+		 templateUrl: 'gamePages/bgFull.currentPlayerBoard.template.html',
+		 url: '/bg.currentPlayerBoard'
+	 })
+	 .component('bgFull.gameBoard', {
 		 controller: 'gameBoardCtrl as $ctrl',
 		 parent: 'bgFull',
 		 templateUrl: 'gamePages/bgFull.gameBoard.template.html',
