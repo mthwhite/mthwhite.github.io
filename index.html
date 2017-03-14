@@ -10,13 +10,13 @@
 	<!--Angular files-->
 	<script src="/packages/angular/angular.js"></script>
 
-	<!--<script src="/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
-	<script src="/node_modules/angular-material/angular-material.min.js"></script>
+	<script src="/packages/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="/packages/angular-material/angular-material.min.js"></script>
 
-	<script src="/node_modules/angular-aria/angular-aria.js"></script>
-	<script src="/node_modules/angular-animate/angular-animate.js"></script>
-	<script src="/node_modules/angular-cookies/angular-cookies.js"></script>
-	<script src="/node_modules/angular-messages/angular-messages.js"></script>-->
+	<script src="/packages/angular-aria/angular-aria.js"></script>
+	<script src="/packages/angular-animate/angular-animate.js"></script>
+	<script src="/packages/angular-cookies/angular-cookies.js"></script>
+	<script src="/packages/angular-messages/angular-messages.js"></script>
 </head>
 <body>
 <div class = "board-game"	ng-app="bgFull"	ng-controller="bgCtrl">
@@ -56,15 +56,6 @@
 
 <script>
 	var app = angular.module('bgFull', [
-			require('angular-animate'),
-			require('angular-aria'),
-			require('angular-cookies'),
-			require('angular-material'),
-			require('angular-messages'),
-			require('angular-route'),
-			require('angular-ui-router'),
-
-
 			'bgFull.currentPlayerBoard',
 			'bgFull.gameBoard',
 			'bgFull.market',
