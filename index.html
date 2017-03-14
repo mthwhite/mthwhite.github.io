@@ -8,14 +8,14 @@
 		Angular Test
 	</title>
 	<!--Angular files-->
-	<script src="vendor/angular/angular.min.js"></script>
-	<script src="vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
-	<script src="vendor/angular-material/angular-material.min.js"></script>
+	<script src="node_modules/angular/angular.js"></script>
+	<script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="node_modules/angular-material/angular-material.min.js"></script>
 
-	<script src="vendor/angular-aria/angular-aria.js"></script>
-	<script src="vendor/angular-animate/angular-animate.js"></script>
-	<script src="vendor/angular-cookies/angular-cookies.js"></script>
-	<script src="vendor/angular-messages/angular-messages.js"></script>
+	<script src="node_modules/angular-aria/angular-aria.js"></script>
+	<script src="node_modules/angular-animate/angular-animate.js"></script>
+	<script src="node_modules/angular-cookies/angular-cookies.js"></script>
+	<script src="node_modules/angular-messages/angular-messages.js"></script>
 </head>
 <body>
 <div class = "board-game"	ng-app="bgFull"	ng-controller="bgCtrl">
@@ -83,31 +83,6 @@
 		 url: '/bg.gameBoard'
 	 });
 
-	//
-	// (function () {
-	//     angular
-	//         .module('bg-full')
-	//         .config(ConfigureModule);
-	//
-	//     ConfigureModule.$inject = ['$stateProvider'];
-	//
-	//     function ConfigureModule($stateProvider) {
-	//         $stateProvider
-	//             // .state('app.questionLevelAssetManagement', {
-	//             //     abstract: true,
-	//             //     parent: 'app',
-	//             //     templateUrl: '/modules/question-level-asset-management/question-level-asset-management.template.html',
-	//             //     title: 'Question Level Asset Management Tool',
-	//             //     url: '/question_level_asset_management'
-	//             // })
-	//             .state('bg-game-board', {
-	//                 controller: 'gameBoardCtrl as $ctrl',
-	//                 parent: 'bgFull',
-	//                 templateUrl: 'gamePages/bg.gameBoard.template.html',
-	//                 url: '/bg.gameBoard'
-	//             });
-	//     }
-	// }());
 
 </script>
 
