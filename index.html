@@ -70,14 +70,13 @@
 	 angular.module('bgFull.statsTesting', []);
 	 angular.module('bgFull.timeCards', []);
 
-	 angular.module('bgFull')
-	 .component('currentPlayerBoard', {
+	 angular.module('bgFull').component('currentPlayerBoard', {
 		 controller: 'currentPlayerBoardCtrl as $ctrl',
 		 parent: 'bgFull',
 		 templateUrl: 'gamePages/bgFull.currentPlayerBoard.template.html',
 		 url: '/bg.currentPlayerBoard'
-	 })
-	 .component('gameBoard', {
+	 });
+	  angular.module('bgFull').component('gameBoard', {
 		 controller: 'gameBoardCtrl as $ctrl',
 		 parent: 'bgFull',
 		 templateUrl: 'gamePages/bgFull.gameBoard.template.html',
