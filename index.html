@@ -38,8 +38,11 @@
 		$locationProvider.html5Mode(true);
 	    $stateProvider
 	        .state('alienExplorers', {
-				templateUrl: '/AlienExplorers/AlienExplorers.html',
-				url: '/AlienExplorers'
+				//templateUrl: '/AlienExplorers/AlienExplorers.html',
+				url: '/AlienExplorers',
+				views:{
+				 	"content@":{templateUrl: "AlienExplorers/AlienExplorers.html"}
+		   		}
 	        });
 	});
 </script>
