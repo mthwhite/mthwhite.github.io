@@ -9,9 +9,9 @@ var bg = angular.module('bgFramework', [
                 url: '/AlienExplorers',
                 views: {
                    '': {
-                     templateUrl: 'AlienExplorers/AlienExplorers.html',
-                     controller: 'alienExplorersCtrl'
-
-                   },
-        });
+                         templateUrl: 'AlienExplorers/AlienExplorers.html',
+                         controller: 'alienExplorersCtrl'
+                       }
+                   }
+            );
 });
