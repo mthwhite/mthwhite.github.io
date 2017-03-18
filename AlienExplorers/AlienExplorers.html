@@ -3,23 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="stylesheet" href="game_css.css">
+	<link rel="stylesheet" href="/Public/css/alienExplorers/game_css.css">
 	<title>
-		Angular Test
+		Angular Test 2
 	</title>
-	<!--Angular files-->
-	<script src="/packages/angular/angular.js"></script>
-
-	<script src="/packages/angular-ui-router/release/angular-ui-router.min.js"></script>
-	<script src="/packages/angular-material/angular-material.min.js"></script>
-
-	<script src="/packages/angular-aria/angular-aria.js"></script>
-	<script src="/packages/angular-animate/angular-animate.js"></script>
-	<script src="/packages/angular-cookies/angular-cookies.js"></script>
-	<script src="/packages/angular-messages/angular-messages.js"></script>
 </head>
 <body>
-<div class = "board-game"	ng-app="AlienExplorers"	ng-controller="AlienExplorersCtrl">
+<div class = "board-game"	ng-app="alienExplorers"	ng-controller="alienExplorersCtrl">
 
 <!--	<div class="container">
 		<button type="button" ng-onclick = "$ctrl.toggle_rules()">Rules</button>
@@ -55,22 +45,22 @@
 
 
 <script>
-	var AE = angular.module('AlienExplorers');
+	var AE = angular.module('alienExplorers');
 
-	 angular.module('AE.currentPlayerBoard', []);
-	 angular.module('AE.gameBoard', []);
-	 angular.module('AE.market', []);
-	 angular.module('AE.statsTable', []);
-	 angular.module('AE.statsTesting', []);
-	 angular.module('AE.timeCards', []);
+	 angular.module('ae.currentPlayerBoard', []);
+	 angular.module('ae.gameBoard', []);
+	 angular.module('ae.market', []);
+	 angular.module('ae.statsTable', []);
+	 angular.module('ae.statsTesting', []);
+	 angular.module('ae.timeCards', []);
 
-	 AE.component('AE.currentPlayerBoard', {
+	 AE.component('ae.currentPlayerBoard', {
 		 controller: 'currentPlayerBoardCtrl as $ctrl',
 		 parent: 'AlienExplorers',
 		 templateUrl: 'gamePages/AE.currentPlayerBoard.template.html',
 		 url: '/currentPlayerBoard'
 	 });
-	  AE.component('gameBoard', {
+	  AE.component('ae.gameBoard', {
 		 controller: 'gameBoardCtrl as $ctrl',
 		 parent: 'bgFull',
 		 templateUrl: 'gamePages/AE.gameBoard.template.html',
@@ -82,7 +72,7 @@
 
 <script>
 (function () {
-    angular.module('AlienExplorers').controller('AlienExplorersCtrl', AEController);
+    angular.module('alienExplorers').controller('alienExplorersCtrl', AEController);
 
 	bgFullController.$inject = [];
 	// 		'AE.currentPlayerBoard',
