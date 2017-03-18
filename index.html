@@ -20,9 +20,9 @@
 </head>
 <body>
 <div class = "board-game" ng-app="bgFramework" ng-controller="bgCtrl">
-	<<a
+	<a
         class="bg-button"
-        ui-sref="AlienExplorers"
+        href="/AlienExplorers/AlienExplorers.html"
         id="lnkAlienExplorers"
         >Alien Explorers
     </a>
@@ -33,17 +33,7 @@
 
 
 <script>
-	var bg = angular.module('bgFramework', [
-			'AlienExplorers'
-	 ]);
-
-	 bg.component('AlienExplorers', {
-		 controller: 'AlienExplorersCtrl as $ctrl',
-		 parent: 'bgFramework',
-		 templateUrl: '/AlienExplorers/AlienExplorers.html',
-		 url: '/AlienExplorers'
-	 });
-
+	var bg = angular.module('bgFramework', []);
 </script>
 
 <script>

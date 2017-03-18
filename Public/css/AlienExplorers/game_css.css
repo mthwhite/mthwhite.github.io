@@ -1,6 +1,8 @@
+@import '../general/board_game_framework.css';
+
 body {
     font-size: 100%;
-	
+
 }
 a {
     text-decoration: none;
@@ -11,7 +13,7 @@ a {
   display: inline-block;
   border: 2px solid black;
   width: 900px;
-  vertical-align: top; 
+  vertical-align: top;
 }
 
 
@@ -55,15 +57,15 @@ a {
 
 /* Highlighting a tile to move to*/
 .tile.available-move {
-	-webkit-box-shadow:0 0 20px #000000; 
-    -moz-box-shadow: 0 0 20px #000000; 
-    box-shadow:0 0 20px #000000; 
+	-webkit-box-shadow:0 0 20px #000000;
+    -moz-box-shadow: 0 0 20px #000000;
+    box-shadow:0 0 20px #000000;
 }
 
 .mark-on {
 	border-radius: 50%;
 	width: 15px;
-	height: 15px; 
+	height: 15px;
 	margin: 0px;
     padding: 0px;
 	float:right;
@@ -72,12 +74,12 @@ a {
 }
 
 .mark-off {
-	
+
 }
 
 .tile-list ol{
 	counter-reset: li;
-	list-style: none; 
+	list-style: none;
 	font-size: 15px;
 	font-family: 'Raleway', sans-serif;
 	padding: 0;
@@ -123,7 +125,7 @@ a {
 	border-radius: 50%;
 	border: 4px solid  #000000;
 	width: 30px;
-	height: 30px; 
+	height: 30px;
 	margin: 0px;
     padding: 0px;
 	float: left;
@@ -140,10 +142,10 @@ a {
   content:"1";
   display: block;
   position: relative;
- 
+
   color: black;
   font-size: 20px;
-  
+
   left: 9px;
   top: 4px;
 }
@@ -152,10 +154,10 @@ a {
   content:"2";
   display: block;
   position: relative;
- 
+
   color: black;
   font-size: 20px;
-  
+
   left: 9px;
   top: 4px;
 }
@@ -165,7 +167,7 @@ a {
 	border-radius: 50%;
 	border: 4px solid  #000000;
 	width: 40px;
-	height: 40px; 
+	height: 40px;
 	/*cursor: move; */
 	/*background: #005609;*/
 }
@@ -208,7 +210,7 @@ a {
     cursor: pointer;
 }
 .action-button.active {
-	
+
 }
 .action-button.inactive {
 	opacity: 0.6;
@@ -222,7 +224,7 @@ a {
 	width: 90px;
 	height: 50px;
 	margin: 0.15em 0.15em;
-	
+
 	text-align: center;
     text-decoration: none;
     font-size: 36px;
@@ -252,16 +254,16 @@ a {
 	width: 90px;
 	height: 50px;
 	margin: 0.15em 0.15em;
-	
+
 	text-align: center;
     text-decoration: none;
     font-size: 16px;
 	float: left;
 }
 .time.available-move {
-	-webkit-box-shadow:0 0 20px #000000; 
-    -moz-box-shadow: 0 0 20px #000000; 
-    box-shadow:0 0 20px #000000; 
+	-webkit-box-shadow:0 0 20px #000000;
+    -moz-box-shadow: 0 0 20px #000000;
+    box-shadow:0 0 20px #000000;
 }
 
 
@@ -292,7 +294,7 @@ a {
 	width: 90px;
 	height: 50px;
 	margin: 0.15em 0.15em;
-	
+
 	text-align: center;
     text-decoration: none;
     font-size: 16px;
@@ -300,9 +302,9 @@ a {
 	background: #cc7bf7;
 }
 .levelup_button.available-move {
-	-webkit-box-shadow:0 0 20px #000000; 
-    -moz-box-shadow: 0 0 20px #000000; 
-    box-shadow:0 0 20px #000000; 
+	-webkit-box-shadow:0 0 20px #000000;
+    -moz-box-shadow: 0 0 20px #000000;
+    box-shadow:0 0 20px #000000;
 }
 
 .player_card {
@@ -311,7 +313,7 @@ a {
 	width: 90px;
 	height: 50px;
 	margin: 0.15em 0.15em;
-	
+
 	text-align: center;
     text-decoration: none;
     font-size: 16px;
@@ -319,16 +321,11 @@ a {
 	background: #cc7bf7;
 }
 .player_card.available-move {
-	-webkit-box-shadow:0 0 20px #000000; 
-    -moz-box-shadow: 0 0 20px #000000; 
-    box-shadow:0 0 20px #000000; 
+	-webkit-box-shadow:0 0 20px #000000;
+    -moz-box-shadow: 0 0 20px #000000;
+    box-shadow:0 0 20px #000000;
 }
 .market {
 	float : right;
 }
 /*end player CSS */
-
-
-
-
-
