@@ -31,16 +31,15 @@
 
 <script>
 	var bg = angular.module('bgFramework', [
-		'alienExplorers'
-	]);
-
-	angular.module('alienExplorers', []);
-
-	bg.component('alienExplorers', {
-		controller: 'alienExplorersCtrl as $ctrl',
-		parent: 'bgFramework',
-		templateUrl: '/AlienExplorers/AlienExplorers.html',
-		url: '/AlienExplorers'
+		'ui.router'
+	]).config((
+	    $stateProvider,
+	) => {
+	    $stateProvider
+	        .state('alienExplorers', {
+				templateUrl: '/AlienExplorers/AlienExplorers.html',
+				url: '/AlienExplorers'
+	        });
 	});
 </script>
 
