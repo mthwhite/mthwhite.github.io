@@ -22,18 +22,26 @@
 <div class = "board-game" ng-app="bgFramework" ng-controller="bgCtrl">
 	<a
         class="bg-button"
-        href="/AlienExplorers/AlienExplorers.html"
+        ui-sref= "AlienExplorers"
         id="lnkAlienExplorers"
         >Alien Explorers
     </a>
 </div>
 </body>
 
-
-
-
 <script>
-	var bg = angular.module('bgFramework', []);
+	var bg = angular.module('bgFramework', [
+		'AlienExplorers'
+	]);
+
+	angular.module('AlienExplorers', []);
+
+	bg.component('AlienExplorers', {
+		controller: 'AlienExplorersCtrl as $ctrl',
+		parent: 'bgFramework',
+		templateUrl: '/AlienExplorers/AlienExplorers.html',
+		url: '/AlienExplorers'
+	});
 </script>
 
 <script>

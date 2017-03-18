@@ -19,14 +19,14 @@
 	<script src="/packages/angular-messages/angular-messages.js"></script>
 </head>
 <body>
-<div class = "board-game"	ng-app="boardgameFramework"	ng-controller="bgCtrl">
+<div class = "board-game"	ng-app="AlienExplorers"	ng-controller="AlienExplorersCtrl">
 
 <!--	<div class="container">
 		<button type="button" ng-onclick = "$ctrl.toggle_rules()">Rules</button>
 		<span id = 'game-rules'>{{$ctrl.rules}}</span>
 	</div>
 -->
-	<span id = 'game-rules' ng-show="1">{{$ctrl.rules}}</span>
+	<span id = 'game-rules' ng-if="1">{{$ctrl.rules}}</span>
 
 	<div class = 'game-border'>
 		<div class = 'game-object'>
@@ -55,33 +55,26 @@
 
 
 <script>
-	var bg = angular.module('bgFull', [
-			'bgFull.currentPlayerBoard',
-			'bgFull.gameBoard',
-			'bgFull.market',
-			'bgFull.statsTable',
-			'bgFull.statsTesting',
-			'bgFull.timeCards'
-	 ]);
+	var AE = angular.module('AlienExplorers');
 
-	 angular.module('bgFull.currentPlayerBoard', []);
-	 angular.module('bgFull.gameBoard', []);
-	 angular.module('bgFull.market', []);
-	 angular.module('bgFull.statsTable', []);
-	 angular.module('bgFull.statsTesting', []);
-	 angular.module('bgFull.timeCards', []);
+	 angular.module('AE.currentPlayerBoard', []);
+	 angular.module('AE.gameBoard', []);
+	 angular.module('AE.market', []);
+	 angular.module('AE.statsTable', []);
+	 angular.module('AE.statsTesting', []);
+	 angular.module('AE.timeCards', []);
 
-	 bg.component('currentPlayerBoard', {
+	 AE.component('AE.currentPlayerBoard', {
 		 controller: 'currentPlayerBoardCtrl as $ctrl',
-		 parent: 'bgFull',
-		 templateUrl: 'gamePages/bgFull.currentPlayerBoard.template.html',
-		 url: '/bg.currentPlayerBoard'
+		 parent: 'AlienExplorers',
+		 templateUrl: 'gamePages/AE.currentPlayerBoard.template.html',
+		 url: '/currentPlayerBoard'
 	 });
-	  bg.component('gameBoard', {
+	  AE.component('gameBoard', {
 		 controller: 'gameBoardCtrl as $ctrl',
 		 parent: 'bgFull',
-		 templateUrl: 'gamePages/bgFull.gameBoard.template.html',
-		 url: '/bg.gameBoard'
+		 templateUrl: 'gamePages/AE.gameBoard.template.html',
+		 url: '/gameBoard'
 	 });
 
 
@@ -89,13 +82,21 @@
 
 <script>
 (function () {
-    angular.module('bgFull').controller('bgCtrl', bgFullController);
+    angular.module('AlienExplorers').controller('AlienExplorersCtrl', AEController);
 
-		bgFullController.$inject = [];
-		function bgFullController() {
-        var vm = this;
-        vm.rules  = "Here be message.";
-				vm.show_rules = 1;
+	bgFullController.$inject = [];
+	// 		'AE.currentPlayerBoard',
+	// 		'AE.gameBoard',
+	// 		'AE.market',
+	// 		'AE.statsTable',
+	// 		'AE.statsTesting',
+	// 		'AE.timeCards'
+	//  ];
+
+	function AEController() {
+	    var vm = this;
+	    vm.rules  = "Here be message.";
+		vm.show_rules = 1;
     };
 }());
 
