@@ -30,22 +30,8 @@
 </div>
 </body>
 
-<script>
-	var bg = angular.module('bgFramework', [
-		'ui.router'
-	]).config(($stateProvider,
-    $locationProvider) => {
-		$locationProvider.html5Mode(true);
-	    $stateProvider
-	        .state('alienExplorers', {
-				//templateUrl: '/AlienExplorers/AlienExplorers.html',
-				url: '/AlienExplorers/AlienExplorers.html',
-				views:{
-				 	"content@":{templateUrl: "AlienExplorers/AlienExplorers.html"}
-		   		}
-	        });
-	});
-</script>
+<script src="index.js"></script>
+<script src="/AlienExplorers/AlienExplorers.js"></script>
 
 <script>
 (function () {
