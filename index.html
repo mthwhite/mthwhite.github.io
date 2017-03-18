@@ -32,7 +32,9 @@
 <script>
 	var bg = angular.module('bgFramework', [
 		'ui.router'
-	]).config(($stateProvider) => {
+	]).config(($stateProvider,
+    $locationProvider) => {
+		$locationProvider.html5Mode(true);
 	    $stateProvider
 	        .state('alienExplorers', {
 				templateUrl: '/AlienExplorers/AlienExplorers.html',
