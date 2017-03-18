@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="game_css.css">
+	<title>
+		Angular Test
+	</title>
+	<!--Angular files-->
+	<script src="/packages/angular/angular.js"></script>
+
+	<script src="/packages/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="/packages/angular-material/angular-material.min.js"></script>
+
+	<script src="/packages/angular-aria/angular-aria.js"></script>
+	<script src="/packages/angular-animate/angular-animate.js"></script>
+	<script src="/packages/angular-cookies/angular-cookies.js"></script>
+	<script src="/packages/angular-messages/angular-messages.js"></script>
+</head>
+<body>
+<div class = "board-game"	ng-app="boardgameFramework"	ng-controller="bgCtrl">
+
+<!--	<div class="container">
+		<button type="button" ng-onclick = "$ctrl.toggle_rules()">Rules</button>
+		<span id = 'game-rules'>{{$ctrl.rules}}</span>
+	</div>
+-->
+	<span id = 'game-rules' ng-show="1">{{$ctrl.rules}}</span>
+
+	<div class = 'game-border'>
+		<div class = 'game-object'>
+			<game-board></game-board>
+		</div>
+		<div class = 'game-object'>
+			<current-player-board></current-player-board>
+		</div>
+		<!--<div class = 'game-object'>
+			<bg-stats-table></bg-stats-table>
+		</div>
+		<div class = 'game-object'>
+			<bg-market></bg-market>
+		</div>
+		<div class = 'game-object'>
+			<bg-time-cards></bg-time-cards>
+		</div>-->
+	</div>
+	<!--<div class = 'game-extra'>
+		<bg-stats-testing></bg-stats-testing>
+	</div>-->
+</div>
+</body>
+
+
+
+
+<script>
+	var bg = angular.module('bgFull', [
+			'bgFull.currentPlayerBoard',
+			'bgFull.gameBoard',
+			'bgFull.market',
+			'bgFull.statsTable',
+			'bgFull.statsTesting',
+			'bgFull.timeCards'
+	 ]);
+
+	 angular.module('bgFull.currentPlayerBoard', []);
+	 angular.module('bgFull.gameBoard', []);
+	 angular.module('bgFull.market', []);
+	 angular.module('bgFull.statsTable', []);
+	 angular.module('bgFull.statsTesting', []);
+	 angular.module('bgFull.timeCards', []);
+
+	 bg.component('currentPlayerBoard', {
+		 controller: 'currentPlayerBoardCtrl as $ctrl',
+		 parent: 'bgFull',
+		 templateUrl: 'gamePages/bgFull.currentPlayerBoard.template.html',
+		 url: '/bg.currentPlayerBoard'
+	 });
+	  bg.component('gameBoard', {
+		 controller: 'gameBoardCtrl as $ctrl',
+		 parent: 'bgFull',
+		 templateUrl: 'gamePages/bgFull.gameBoard.template.html',
+		 url: '/bg.gameBoard'
+	 });
+
+
+</script>
+
+<script>
+(function () {
+    angular.module('bgFull').controller('bgCtrl', bgFullController);
+
+		bgFullController.$inject = [];
+		function bgFullController() {
+        var vm = this;
+        vm.rules  = "Here be message.";
+				vm.show_rules = 1;
+    };
+}());
+
+</script>
+
+<script src="objects.js"></script>
+<script src="generate_tiles.js"></script>
+<script src="actions.js"></script>
+<script src="alien_abilities.js"></script>
+<script src="card_actions.js"></script>
+
+<script src="gameModules/gameBoard.js"></script>
+<script src="gameModules/currentPlayerBoard.js"></script>
+<script src="gameModules/statsTable.js"></script>
+<script src="gameModules/market.js"></script>
+<script src="gameModules/timeCards.js"></script>
+<script src="gameModules/statsTesting.js"></script>
