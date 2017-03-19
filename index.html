@@ -26,9 +26,11 @@
 			<span class = "bg-button" ng-click = "bgCtrl.makeActive('alienExplorers')">Alien Explorers 2</span>
 				<span class = "bg-button" ng-click = "$ctrl.makeActive('alienExplorers')">Alien Explorers 3</span>
 	</div>
-	<div id = "bgAlienExplorers" ng-if = "alienExplorersActive">
+	<div id = "bgAlienExplorers" ng-if = "1"><!--alienExplorersActive">-->
 		<alien-explorers></alien-explorers>
 	</div>
+	{{buttonsActive}}<br />
+	{{alienExplorersActive}}<br /><br />
 	{{bgCtrl.buttonsActive}}<br />
 	{{bgCtrl.alienExplorersActive}}<br /><br />
 	{{$ctrl.buttonsActive}}<br />
