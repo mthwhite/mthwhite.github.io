@@ -6,6 +6,7 @@ var AE = angular.module('alienExplorers', [
 		'ae.statsTesting',
 		'ae.timeCards'
  ]);
+ 
 
  angular.module('ae.currentPlayerBoard', []);
  angular.module('ae.gameBoard', []);
