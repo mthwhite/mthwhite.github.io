@@ -21,12 +21,12 @@
 </head>
 <body>
 <div class = "board-game" ng-app="bgFramework" ng-controller="bgCtrl">
-	<a
-        class="bg-button"
-        ui-sref= "alienExplorers"
-        id="lnkAlienExplorers"
-        >Alien Explorers
-    </a>
+	<div id = "buttons" ng-if = "$ctrl.buttonsActive">
+		<span class = "bg-button" ng-click = "$ctrl.makeActive('alienExplorers')">Alien Explorers </span>
+	</div>
+	<div id = "bgAlienExplorers" ng-if = "$ctrl.alienExplorersActive">
+		<alien-explorers></alien-explorers>
+	</div>
 </div>
 </body>
 
@@ -40,6 +40,16 @@
 	bgFrameworkController.$inject = [];
 	function bgFrameworkController() {
     	var vm = this;
+
+		vm.buttonsActive = 1;
+		vm.alienExplorersActive = 0;
+
+		vm.makeActive = function (game) {
+			vm.buttonsActive = 0;
+			if(game === "alienExplorers") {
+				vm.alienExplorersActive = 1;
+			}
+		}
 	};
 }());
 
