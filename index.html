@@ -22,13 +22,15 @@
 <body>
 <div class = "board-game" ng-app="bgFramework" ng-controller="bgCtrl">
 	<div id = "buttons" ng-if = "1"><!--"buttonsActive">-->
-		<span class = "bg-button" ng-click = "{{makeActive('alienExplorers')}}">Alien Explorers </span>
-			<span class = "bg-button" ng-click = "{{bgCtrl.makeActive('alienExplorers')}}">Alien Explorers 2</span>
-				<span class = "bg-button" ng-click = "{{$ctrl.makeActive('alienExplorers')}}">Alien Explorers 3</span>
+		<span class = "bg-button" ng-click = "makeActive('alienExplorers')">Alien Explorers </span>
+			<span class = "bg-button" ng-click = "bgCtrl.makeActive('alienExplorers')">Alien Explorers 2</span>
+				<span class = "bg-button" ng-click = "$ctrl.makeActive('alienExplorers')">Alien Explorers 3</span>
 	</div>
-	<div id = "bgAlienExplorers" ng-if = "{{alienExplorersActive}}">
+	<div id = "bgAlienExplorers" ng-if = "alienExplorersActive">
 		<alien-explorers></alien-explorers>
 	</div>
+	{{buttonsActive}}<br />
+	{{alienExplorersActive}}
 </div>
 </body>
 
