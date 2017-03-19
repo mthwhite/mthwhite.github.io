@@ -9,7 +9,7 @@ var bg = angular.module('bgFramework', [
                 url: '/AlienExplorers',
                 views: {
                    '': {
-                         templateUrl: 'AlienExplorers/AlienExplorers.html',
+                         templateUrl: 'AlienExplorers.html',
                          controller: 'alienExplorersCtrl'
                        }
                    }
