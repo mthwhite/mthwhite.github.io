@@ -6,7 +6,7 @@ var AE = angular.module('alienExplorers', [
 		'ae.statsTesting',
 		'ae.timeCards'
  ]);
- 
+
 
  angular.module('ae.currentPlayerBoard', []);
  angular.module('ae.gameBoard', []);
@@ -27,3 +27,17 @@ var AE = angular.module('alienExplorers', [
      templateUrl: 'gamePages/AE.gameBoard.template.html',
      url: '/gameBoard'
  });
+
+
+
+ (function () {
+     angular.module('alienExplorers').controller('alienExplorersCtrl', AEController);
+
+ 	AEController.$inject = [];
+
+ 	function AEController() {
+ 	    var vm = this;
+ 	    vm.rules  = "Here be message.";
+ 		vm.show_rules = 1;
+     };
+ }());
