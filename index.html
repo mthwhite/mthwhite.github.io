@@ -40,12 +40,13 @@
 	bgFrameworkController.$inject = [];
 	function bgFrameworkController() {
     	var vm = this;
-
+console.log("1");
 		vm.buttonsActive = 1;
 		vm.alienExplorersActive = 0;
 
 		vm.makeActive = function (game) {
 			vm.buttonsActive = 0;
+			console.log("2");
 			if(game === "alienExplorers") {
 				vm.alienExplorersActive = 1;
 			}
