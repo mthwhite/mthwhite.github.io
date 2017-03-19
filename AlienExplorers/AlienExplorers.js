@@ -17,13 +17,13 @@ var AE = angular.module('alienExplorers', [
 
  AE.component('ae.currentPlayerBoard', {
      controller: 'currentPlayerBoardCtrl as $ctrl',
-     parent: 'AlienExplorers',
+     parent: 'alienExplorers',
      templateUrl: 'gamePages/AE.currentPlayerBoard.template.html',
      url: '/currentPlayerBoard'
  });
   AE.component('ae.gameBoard', {
      controller: 'gameBoardCtrl as $ctrl',
-     parent: 'bgFull',
+     parent: 'alienExplorers',
      templateUrl: 'gamePages/AE.gameBoard.template.html',
      url: '/gameBoard'
  });
@@ -42,9 +42,9 @@ var AE = angular.module('alienExplorers', [
      };
  }());
 
-angular.module('bgFramework').component('alienExplorers', {
-     controller: 'AEController as $ctrl',
-     parent: 'bgFramework',
-     templateUrl: 'AlienExplorers/AlienExplorers.html',
-     url: '/AlienExplorers'
- });
+// angular.module('bgFramework').component('alienExplorers', {
+//      controller: 'AEController as $ctrl',
+//      parent: 'bgFramework',
+//      templateUrl: 'AlienExplorers/AlienExplorers.html',
+//      url: '/AlienExplorers'
+//  });
