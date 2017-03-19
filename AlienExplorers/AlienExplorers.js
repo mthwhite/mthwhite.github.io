@@ -41,3 +41,10 @@ var AE = angular.module('alienExplorers', [
  		vm.show_rules = 1;
      };
  }());
+
+angular.module('bgFramework').component('alienExplorers', {
+     controller: 'AEController as $ctrl',
+     parent: 'bgFramework',
+     templateUrl: 'AlienExplorers/AlienExplorers.html',
+     url: '/AlienExplorers'
+ });
