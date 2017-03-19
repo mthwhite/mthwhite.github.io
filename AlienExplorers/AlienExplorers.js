@@ -1,10 +1,10 @@
 var AE = angular.module('alienExplorers', [
-        'AE.currentPlayerBoard',
-		'AE.gameBoard',
-		'AE.market',
-		'AE.statsTable',
-		'AE.statsTesting',
-		'AE.timeCards'
+        'ae.currentPlayerBoard',
+		'ae.gameBoard',
+		'ae.market',
+		'ae.statsTable',
+		'ae.statsTesting',
+		'ae.timeCards'
  ]);
 
  angular.module('ae.currentPlayerBoard', []);

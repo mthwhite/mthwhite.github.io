@@ -13,5 +13,6 @@ var bg = angular.module('bgFramework', [
                          controller: 'alienExplorersCtrl'
                        }
                    }
+			   }
             );
 });
