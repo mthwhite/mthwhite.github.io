@@ -1,5 +1,5 @@
 (function () {
-    angular.module('bgFull.gameBoard').controller('gameBoardCtrl', gameBoardController);
+    angular.module('ae.gameBoard').controller('gameBoardCtrl', gameBoardController);
 
 		gameBoardController.$inject = [];
 		function gameBoardController() {

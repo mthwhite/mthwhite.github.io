@@ -1,5 +1,5 @@
 (function () {
-    angular.module('bgFull.currentPlayerBoard').controller('currentPlayerBoardCtrl', currentPlayerBoardController);
+    angular.module('ae.currentPlayerBoard').controller('currentPlayerBoardCtrl', currentPlayerBoardController);
 
 		currentPlayerBoardController.$inject = [];
 		function currentPlayerBoardController() {
