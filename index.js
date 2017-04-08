@@ -12,14 +12,14 @@ angular.module('bgFramework', ['Injector.Service']);
             .state('alienExplorers', {
                 controller: 'alienExplorersCtrl as $ctrl',
                 parent: 'bgFramework',
-                templateUrl: '/alienExplorers/alienExplorers.html',
-                title: 'Alien Explorers'
+                templateUrl: '/AlienExplorers/alienExplorers.html',
+                title: 'Alien Explorers',
                 url: '/alienExplorers'
             })
             .state('pokemon', {
                 controller: 'pokemonCtrl as $ctrl',
                 parent: 'bgFramework',
-                templateUrl: '/pokemon/pokemon.html',
+                templateUrl: '/Pokemon/pokemon.html',
                 title: 'Pokemon',
                 url: '/pokemon'
             });
