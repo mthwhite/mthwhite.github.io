@@ -20,46 +20,23 @@
 	<script src="/packages/angular-messages/angular-messages.js"></script>
 </head>
 <body>
-<div class = "board-game" ng-app="bgFramework" ng-controller="bgCtrl">
-	<div id = "buttons" ng-if = "1"><!--"buttonsActive">-->
-		<span class = "bg-button" ng-click = "makeActive('alienExplorers')">Alien Explorers </span>
-			<span class = "bg-button" ng-click = "bgCtrl.makeActive('alienExplorers')">Alien Explorers 2</span>
-				<span class = "bg-button" ng-click = "$ctrl.makeActive('alienExplorers')">Alien Explorers 3</span>
-	</div>
-	<div id = "bgAlienExplorers" ng-if = "1"><!--alienExplorersActive">-->
-		<alien-explorers></alien-explorers>
-	</div>
-	{{buttonsActive}}<br />
-	{{alienExplorersActive}}<br /><br />
-	{{bgCtrl.buttonsActive}}<br />
-	{{bgCtrl.alienExplorersActive}}<br /><br />
-	{{$ctrl.buttonsActive}}<br />
-	{{$ctrl.alienExplorersActive}}
-</div>
+	<a
+		class="bg-button"
+		ui-sref="alienExplorers"
+		>Alien Explorers
+	</a>
+	<a
+		class="bg-button"
+		ui-sref="pokemon"
+		>Pokemon
+	</a>
 </body>
 
 <script src="index.js"></script>
 <script src="/AlienExplorers/AlienExplorers.js"></script>
+<script src="/Pokemon/pokemon.js"></script>
 
 <script>
-(function () {
-    angular.module('bgFramework').controller('bgCtrl', bgFrameworkController);
 
-	bgFrameworkController.$inject = [];
-	function bgFrameworkController() {
-    	var vm = this;
-console.log("1");
-		vm.buttonsActive = 1;
-		vm.alienExplorersActive = 0;
-
-		vm.makeActive = function (game) {
-			vm.buttonsActive = 0;
-			console.log("2");
-			if(game === "alienExplorers") {
-				vm.alienExplorersActive = 1;
-			}
-		}
-	};
-}());
 
 </script>
