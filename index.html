@@ -21,19 +21,12 @@
 </head>
 <body>
 <div class="bgFramework" ng-controller="bgCtrl">
-	{{bgCtrl.this}}<br />
-	{{this}}<br />
-	Why doesn't {{this}} work?
-	<a
-		class="bg-button"
-		ui-sref="alienExplorers"
-		>Alien Explorers
-	</a>
-	<a
-		class="bg-button"
-		ui-sref="pokemon"
-		>Pokemon
-	</a>
+	<div ng-if = '1'>
+		<!--<alien-explorers />-->
+	</div>
+	<div ng-if = '1'>
+		<pokemon />
+	</div>
 </div>
 </body>
 
