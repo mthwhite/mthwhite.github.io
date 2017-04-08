@@ -9,7 +9,7 @@ angular.module('bgFramework', ['Injector.Service']);
 
     function ConfigureModule($stateProvider) {
         $stateProvider
-            .state('app.questionManagement.index', {
+            .state('alienExplorers', {
                 controller: 'alienExplorersCtrl as $ctrl',
                 parent: 'bgFramework',
                 templateUrl: '/alienExplorers/alienExplorers.html',
@@ -23,5 +23,17 @@ angular.module('bgFramework', ['Injector.Service']);
                 title: 'Pokemon',
                 url: '/pokemon'
             });
+    }
+}());
+
+(function () {
+    angular
+        .module('bgFramework')
+        .controller('bgCtrl', bgController);
+
+    bgController.$inject = [];
+
+    function bgController() {
+        var vm = this;
     }
 }());
