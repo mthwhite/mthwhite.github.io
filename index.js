@@ -1,4 +1,4 @@
-angular.module('bgFramework', [/*'Injector.Service'*/]);
+angular.module('bgFramework', ['Injector.Service']);
 
 // (function () {
 //     angular
