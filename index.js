@@ -35,5 +35,7 @@ angular.module('bgFramework', ['Injector.Service']);
 
     function bgController() {
         var vm = this;
+
+        vm.display = "this";
     }
 }());
