@@ -1,0 +1,17 @@
+.hp-xp-bar {
+    position: absolute;
+    width: 250px;
+    left: 25%;
+    top: 5%;
+    border:1.5px black solid;
+}
+
+.health-wrapper {
+    float:left;
+    padding: 0 10px 0 0;
+}
+
+.experience-wrapper {
+    float: right;
+    padding: 0 1px 0 10px;
+}
